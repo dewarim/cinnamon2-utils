@@ -1,6 +1,8 @@
 # CinnamonUtils
 
 CinnamonUtils is a collection of utility classes for the Cinnamon CMS server, version 2.x.
+This includes the BCrypt library code, commonly used interfaces
+and the global Conf class which gives access to the server's configuration files.
 
 License: LGPL 2.1 or later
 
