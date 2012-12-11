@@ -1,0 +1,83 @@
+2.4.0
++ Moved to new git repository.
+
+2.0.5
++ Added another null-check and improved error messageId (error.path.is.null instead of error.file.is.null)
+
+2.0.4
++ Added static method Conf.createDatabaseConnectionURL(...)
+
+1.0.8
++ Refactored some classes into CinnamonBase.
+
+1.0.7
+1.0.6
+1.0.5
+1.0.4
+(see Server/changelog for changes)
+
+1.0.1
++ Added more Constants for WorkflowEngine
++ Added HtmlResponse
+
+1.0.0
++ Added Constants for WorkflowEngine
+
+0.7.1
+- 
+
+0.7.0
++ Added HashMaker to generate sha256 password hashes.
++ Added utils.TempDir with static method "File createTempDir()".
++ Fixed #1523: session timeout message is broken.
++ Added ParamParser.prettyPrinter(xml)
+
+0.6.9
+- 
+
+0.6.8
+Moved some more classes to remove cyclic dependency.
+
+0.6.7
+moving some classes to Utils. There is now a cyclic dependency between EntityLib and Utils,
+so for the first build you may have to create a entitylib-source-jar and add it temporarily to Utils.
+
+0.6.6
+Removed Constants.POST_LOG and COMMAND_LOG.
+	 If you really need them, please use Conf and store them in cinnamon_config.xml.
+
+0.6.5
+new: ConfThreadLocal: getSessionExpirationTime(String repository_name).
+
+0.6.4
+API changed:
+OSD.contentPath is now stored without full path information (just the path below $repository),
+that is: /home/zimt/cinnamon-data/cmn_test is omitted.
+
+0.5.8
+added Constants.FOLDER_TYPE_DEFAULT="_default_folder_type"
+added Conf.getApiClasses which returns a list of ApiClasses (to define the public API of 
+a Cinnamon repository).
+  
+0.5.7
+Cleaned up Conf and ConfThreadLocal. You should use the latter instead of the former.
+
+Added utils.ContentReader to help slurping character based content into a string in one go.
+Added several constants. 
+
+0.5.6
+added server.data.MSSQLServerNativeDialect to enable automatic creation of Unicode fields
+ instead of the classic, collation-dependent MSSQL-column types. (So now Hibernate will generate
+ nvarchar instead of varchar).
+ *** NOTE ***
+ Make sure that your persistence.xml uses this class instead of the traditional SQLServerDialect.
+  
+0.5.5
+moved dateToIsoString to ParamParser.
+ 
+0.5.4
+server.global.Constants: added several database related fields.
+
+after v0.1
+----------
+-Conf.getRepositoryList() now returns a Collection<String> instead of Iterator<String>

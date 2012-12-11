@@ -1,0 +1,10 @@
+Current Dependencies:
+
+required to build:
+- Hibernate 3.3
+- Hibernate Annotations 3.4
+
+Additional:
+Logback (logback-core*.jar and logback-classic*.jar)
+slf4j (slf4j-api*.jar)
+apache commons-io 1.4
