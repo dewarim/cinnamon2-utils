@@ -25,7 +25,7 @@ import server.exceptions.CinnamonConfigurationException;
 import server.global.Conf;
 
 /**
- * The Conf class loads the configuration from the XML file "config/config.xml". It follows a Singleton pattern by
+ * The Conf class loads the configuration from the XML file "cinnamon_config.xml". It follows a Singleton pattern by
  * storing the Conf object in a ThreadLocal variable to prevent repeated parsing of the configuration file.   
  *
  */
